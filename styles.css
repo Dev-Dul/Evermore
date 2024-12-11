@@ -99,8 +99,49 @@ main{
     flex-direction: column;
 }
 
+h1{
+    position: relative;
+}
+
+
+h1::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    background: black;
+    transition: all 1.5s ease;
+}
+
+h1.active::after{
+    width: 100%;
+}
+
+h1 span{
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(calc(var(--sp) * 20px));
+    transition: all 1s ease;
+    transition-delay: calc(var(--sp) * 0.25s);
+}
+
+h1 span.active{
+    opacity: 1;
+    transform: translate(0);
+}
+
 .container p{
     margin: 0;
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateY(100px);
+}
+
+.container p.active{
+    opacity: 1;
+    transform: translate(0);
 }
 
 .footer{
