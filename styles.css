@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+header{
+    height: 15vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+nav .right{
+    margin-right: 3.5rem;
+}
+
+.drop{
+    display: inline-block;
+    position: relative;
+    /* display: flex;
+    justify-content: space-evenly;
+    align-items: center; */
+}
+
+.dropdown{
+    padding: 0;
+    width: max-content;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+    top:  70%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1.5s ease;
+    transform: translateY(-30px);
+}
+
+.dropdown.visible{
+    opacity: 1;
+    transform: translate(0);
+}
+
+.dropdown li{
+    width: 100%;
+    opacity: 0;
+    transform: translateY(calc(var(--li) * 100%));
+    transition: all 1.5s ease;
+    transition-delay: calc(var(--li) * 0.5s);
+}
+
+.dropdown li.visible{
+    opacity: 1;
+    transform: translate(0);
+}
+
+.dropdown li button{
+    width: 100%;
+    display: block;
+    padding: 0.7rem;
+    margin: 0;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+
+.right  button{
+    margin: 0 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+    margin-top: 15vh;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    margin-top: -5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container p{
+    margin: 0;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 50px;
+}
+
+.scrolldown{
+    width: 10px;
+    height: 10px;
+    position: relative;
+}
+
+.scrolldown span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-right: 2px solid red;
+    border-bottom: 2px solid red;
+    transform: rotate(45deg);
+}
+
+.scrolldown span:nth-child(2){
+    top: 7px;
+}
+
