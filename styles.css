@@ -62,6 +62,7 @@ div.logo h2{
     list-style-type: none;
     top:  70%;
     opacity: 0;
+    border-radius: 5px;
     font-family: "Quinsi";
     pointer-events: none;
     transition: all 1.5s ease;
@@ -76,6 +77,8 @@ div.logo h2{
 .dropdown li{
     width: 100%;
     opacity: 0;
+    background: #66cdaa;
+    border-bottom: 1px solid white;
     transform: translateY(calc(var(--li) * 100%));
     transition: all 1.5s ease;
     transition-delay: calc(var(--li) * 0.5s);
