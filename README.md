@@ -1,2 +1,2 @@
 # Evermore
-Evermore dropdown
+Simplistic webpage showcasing an amazing dropdown animation
